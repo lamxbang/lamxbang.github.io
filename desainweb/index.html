@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Graph Sites</title>
+	<link rel="stylesheet" type="text/css" href="Home/layout_home.css">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+
+<body>
+<!-- Header -->
+<div class="header">
+  <h1 class="header-text">GRAPH SITES</h1>
+  <p class="header-text">Situs untuk Belajar Graph</p>
+</div>
+
+<!-- (gajadi) Sticky Header -->
+<div class="sticky-header" id="stikhed">
+  <h2>Home</h2>
+</div>
+
+<!-- Content -->
+<div class="content" id="konten">
+  <!-- Navigation -->
+  <div class="navtop transparan1">
+    <p><a href="home/home.html">Home</a></p>
+  </div>
+
+
+  <div id="dummyid"></div>
+  <!-- left Navigation -->
+  <div class="left-side" id="sidenav">
+    <ul>
+      <div  class="drop-home">
+      <li  style="background-color:#023f52;"><a href="Home/home.html">Home</a></li>
+      </div>
+
+      <div  class="drop1">
+        <li><a href="Graph/graph.html">Graph</a></li>
+        <div class="dropdown-container">
+        <li class="sub subdrop1"><a href="Graph/graph.html#sejarah">Sejarah</a></li>
+        <li class="sub subdrop1"><a href="Graph/graph.html#definisi">Definisi</a></li>
+        <li class="sub subdrop1"><a href="Graph/graph.html#adjasensi">Adjasensi dan Insidensi</a></li>
+        <li class="sub subdrop1"><a href="Graph/graph.html#isomorfisme">Isomorfisme</a></li>
+        <li class="sub subdrop1"><a href="Graph/graph.html#subgraph">Subgraph</a></li>
+      </div>
+      </div>
+      
+      <div  class="drop2">
+      <li><a href="Euler/euler.html">Euler dan Hamilton</a></li>
+      <div class="dropdown-container">
+      <li class="sub subdrop2"><a href="Euler/euler.html#pengantar">Pengantar</a></li>
+      <li class="sub subdrop2"><a href="Euler/euler.html#grapheu_ha">Graph Euler dan Hamilton</a></li>
+      </div>
+      </div> 
+
+      <div  class="drop3">
+      <li><a href="Digraph/digraph.html">Digraph</a></li>
+      <div class="dropdown-container">
+      <li class="sub subdrop3"><a href="Digraph/digraph.html#definisi">Definisi</a></li>
+      <li class="sub subdrop3"><a href="Digraph/digraph.html#adjasensi">Adjasensi dan Insidensi</a></li>
+      </div>
+      </div>
+
+      <div  class="drop">
+      <li><a href="Latihan/latihan.html">Latihan Soal</a></li>
+      </div>
+    </ul>
+  </div>
+  <!-- Main Content -->
+  <div class="main transparan1">
+    <div class="greeting">
+      <br><h2>Graph Site</h2>
+      <hr>
+      <p>Selamat datang di situs belajar teori graph, <b>Graph Site!</b></p>
+    </div>
+
+    <br><br><h3>Tentang Situs</h3>
+    <p><b>Graph Site</b> ini dibuat sebagai sarana untuk memberikan beragam pengetahuan, informasi, dan wawasan, khususnya yang berkaitan dengan bidang Teori Graph. Situs ini diharapkan mampu menjadi jendela ilmu baik bagi mahasiswa, dosen, maupun masyarakat umum.</p>
+
+    <br><br><h3>Pokok Bahasan Materi</h3>
+    
+    <center>
+    <table>
+      <tr>
+        <td><a href="Graph/graph.html">Graph</a></td>
+        <td><a href="Euler/euler.html">Euler & Hamilton</a></td>
+      </tr>
+      <tr>
+        <td><a href="Digraph/digraph.html">Digraph</a></td>
+        <td><a href="Latihan/latihan.html">Latihan Soal</a></td>
+      </tr>
+    </table>
+    </center>
+
+
+    <br><br><p>Kami secara aktif akan terus berinovasi untuk membagikan ilmu dan informasi yang relevan untuk meningkatkan layanan dan kepuasan anda dalam mengakses ateri <b>Teori Graph</b>. Kami juka membuka diri untuk menerima masukan sebagai bahan evaluasi yang berkelanjutan. Anda dapat Menuliskannya di fitur komentar dengan mengklik icon <b>komentar</b> yang ada di bagian pojok kiri bawah.</p>
+
+    <br><p>Terima kasih anda telah berkunjung di website kami. Harapan kami, website ini dapat menjadi referensi bagi siapapun yang ingin belajar mengenai <b>Teori Graph</b>.</p>
+
+    <br><br><p>Semoga Bermanfaat, dan<br>Terima kasih<br>^_^</p><br><br><br>
+  </div>
+
+  <!-- Comment -->
+  <div class="right-side transparan2">
+    <div class="comment">
+      <h3 class="comment">Adelia Tria</h3>
+      <p class="comment">Situs ini sangat membantu saya dalam memahami materi tentang graph. Terima kasih banyak.</p>
+      <h3 class="comment">Aslama Nurul</h3>
+      <p class="comment">Situs ini sangat membantu saya saat belajar tentang materi graph. Apalagi ada soal latihannya juga. uWu Terima kasih banyak.</p>
+      <h3 class="comment">Tegar Herlembang</h3>
+      <p class="comment">Situs ini sangat mantap sekali, bintang 5!</p>
+      <h3 class="comment" id="komennama"></h3>
+      <p class="comment" id="komenkomentar" style="display: none;"></p>
+    </div>
+
+    
+    <!--form comment-->
+    <img class="comment-icon" src="comment.png" width="50px" onclick="opencom()">
+    
+    <div class="comment-form" id="comment-form-id">
+      <img class="closebtn" src="cross.png" width="20px" onclick="closecom()">
+      <form id="myForm">
+        <label>Nama:</label><br>
+        <input type="text" name="nama" placeholder="Nama anda" value=""><br>
+        <label>Komentar:</label><br>
+        <textarea rows="5" cols="20" placeholder="Silakan masukkan komentar anda" name="komentar"></textarea><br>
+      </form>
+      <button onclick="submit()">Kirim</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>About Us</h2>
+  <div class="footer-content">
+    <div class="footer-flex">
+      <p>Adelia Tria Amanda</p>
+      <p>adelia.tria.1903116@students.um.ac.id</p>
+      <p>S1 Pendidikan Matematika UM</p>
+    </div>
+    <div class="footer-flex">
+      <p>Aslama Nurul Amini</p>
+      <p>aslama.nurul.1903116@students.um.ac.id </p>
+      <p>S1 Pendidikan Matematika UM</p>
+    </div>
+    <div class="footer-flex">
+      <p>Tegar Herlambang</p>
+      <p>tegar.herlambang.1903116@students.um.ac.id </p>
+      <p>S1 Pendidikan Matematika UM</p>
+    </div>
+  </div>
+  <p style="margin-top: 25px;"><i>© 2022 Kelompok 1 Desain Web</i></p>
+</div>
+
+
+<!--js-->
+<script src="js.js"></script>
+
+</body>
+</html>

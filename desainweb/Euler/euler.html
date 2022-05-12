@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Graph Sites (Eulerian and Hamiltonian Graph)</title>
+	<link rel="stylesheet" type="text/css" href="../layout.css">
+  <link rel="icon" type="image/x-icon" href="../logo.png">
+</head>
+
+<body>
+<!-- Header -->
+<div class="header">
+  <h1 class="header-text">GRAPH SITES</h1>
+  <p class="header-text">Situs untuk Belajar Graph</p>
+</div>
+
+<!-- (gajadi) Sticky Header -->
+<div class="sticky-header" id="stikhed">
+  <h2>Graph Euler dan Hamiltonian</h2>
+</div>
+
+<!-- Content -->
+<div class="content" id="konten">
+  <!-- Navigation -->
+  <div class="navtop transparan1">
+    <p><a href="../index.html">Home</a> / <a href="euler.html">Euler dan Hamiltonian</a></p>
+  </div>
+
+
+  <div id="dummyid"></div>
+  <!-- left Navigation -->
+  <div class="left-side" id="sidenav">
+    <ul>
+      <div  class="drop-home">
+      <li  style="background-color:#023f52;"><a href="../index.html">Home</a></li>
+      </div>
+
+      <div  class="drop1">
+        <li><a href="../Graph/graph.html">Graph</a></li>
+        <div class="dropdown-container">
+        <li class="sub subdrop1"><a href="../Graph/graph.html#sejarah">Sejarah</a></li>
+        <li class="sub subdrop1"><a href="../Graph/graph.html#definisi">Definisi</a></li>
+        <li class="sub subdrop1"><a href="../Graph/graph.html#adjasensi">Adjasensi dan Insidensi</a></li>
+        <li class="sub subdrop1"><a href="../Graph/graph.html#isomorfisme">Isomorfisme</a></li>
+        <li class="sub subdrop1"><a href="../Graph/graph.html#subgraph">Subgraph</a></li>
+      </div>
+      </div>
+      
+      <div  class="drop2">
+      <li><a href="../Euler/euler.html">Euler dan Hamilton</a></li>
+      <div class="dropdown-container">
+      <li class="sub subdrop2"><a href="../Euler/euler.html#pengantar">Pengantar</a></li>
+      <li class="sub subdrop2"><a href="../Euler/euler.html#grapheu_ha">Graph Euler dan Hamilton</a></li>
+      </div>
+      </div> 
+
+      <div  class="drop3">
+      <li><a href="../Digraph/digraph.html">Digraph</a></li>
+      <div class="dropdown-container">
+      <li class="sub subdrop3"><a href="../Digraph/digraph.html#definisi">Definisi</a></li>
+      <li class="sub subdrop3"><a href="../Digraph/digraph.html#adjasensi">Adjasensi dan Insidensi</a></li>
+      </div>
+      </div>
+
+      <div  class="drop">
+      <li><a href="../Latihan/latihan.html">Latihan Soal</a></li>
+      </div>
+    </ul>
+  </div>
+  <!-- Main Content -->
+  <div class="main transparan1">
+    <center><h2>Graph Eulerian dan Hamiltonian</h2></center>
+    
+    <h3 id="pengantar">Pengantar</h3>
+    <p>
+    Sebelum kita mempelajari apa itu Graph Euler dan Graph Hamilton, mari kita pelajari terlebih dahulu materi tentang walk (jalan), trail (jejak), path (lintasan), dan cycle (siklus) dalam suatu graph.</p>
+    <h4>Walk (Jalan)</h4>
+    <p>
+   Sebuah jalan dengan panjang k dalam graph G adalah suatu barisan (tak kosong) W = {v0, e1, v1, e2, …, ei, vi, …, ek, vk} yang suku-sukunya berupa simpul dan sisi yang diurutkan secara bergantian sedimikian hingga vi-1 dan vi adalah titik-titik akhir sisi ei, untuk 1<= i <= k. Umumnya, Walk dinotasikan dengan W.</p>
+    <i>Keterangan</i>
+    <br>Vo merupakan simpul awal; Vk merupakan simpul akhir</br>
+    <h4>Macam-macam jalan</h4>
+    Jalan terbuka: Jalan yang titik awal dan titik akhirnya berbeda.
+    <br>Jalan tertutup: Jalan yang titik awal dan titik akhirnya sama.</br>
+    <br>
+
+    <center><img src="w-1.png" width="220px" /></center>
+    <p> Perjalanan dari titik u ke x ditempuh dengan melalui jalan W= {u, uv, v, vw, w, wx, x}. Yang mana panjang jalannya adalah 3 (dihitung dari banyaknya sisi pada jalan). Jalan ini merupakan jalan terbuka karena titik awal dan titik akhirnya berbeda.</p>
+    <h4>Trail (Jejak)</h4>
+     <p>Jejak pada suatu graph adalah jalan yang sisi-sisinya berbeda dan titiknya boleh berulang.</p>
+    <h4>Lintasan (Path)</h4>
+     <p>Jalan yang semua sisi dan titiknya harus berbeda.</p>
+    <h4>Siklus (Cycle)</h4>
+    <p>Siklus adalah jalan tertutup, dimana tidak ada simpul lain yang diulangi selain dari simpul awal/akhir.</p>
+     <center><img src="w-2.png" width="230px" /></center>
+      <p>W = {u, uv, v, vy, y, yw, w, wv, v} merupakan <b>trail</b> karena sisi-sisinya berbeda dan titiknya boleh berulang. W= {u, uv, v, vy, y, yx, x} merupakan <b>lintasan</b> karena sisi dan titiknya berbeda. W= (v, vw, w, wy, y, yv, v) merupakan <b>siklus</b> karena merupakan jalan tertutup dimana tidak ada simpul lain yang diulangi selain dari simpul awal/akhir.<p>
+      <p>Jika Anda sudah memahami apa itu walk, trail, lintasan, dan siklus maka kita lanjutkan pembahasan mengenai Graph Euler dan Hamilton. Jika Anda masih kesulitan memahaminya, silakan simak video pada link berikut:</p>
+      <center>
+     <iframe
+      width="420"
+     height="315"
+     src="https://www.youtube.com/embed/jOGv1FgjA8U">
+     </iframe>
+  </center>
+    <br>
+    <hr>
+     <h3 id="grapheu_ha">Graph Euler dan Hamilton</h3>
+    <p>Graph Euler adalah suatu graph terhubung yang memuat closed trail (jejak tertutup) yang memuat semua sisi (edge) pada graph. Sedangkan, Graph Hamilton adalah suatu graph terhubung yang memuat cycle yang didalamnya memuat semua titik pada graph.</p>
+    <h4>Contoh</h4>
+    <center><img src="w-3.png" width="300px" /></center>
+    <p>Graph (a) adalah graph Hamilton, dengan siklusnya adalah W = {a, ab, b, bc, c, cd, d, de, e, eg, g, gf, f, fa, a}. Sedangkan, graph (b) adalah graph Euler, dengan trailnya adalah W = {b, bc, c, cg, g, gf, f, fc, c, cg, gb, b}</p>
+  </div>
+
+  <!-- Comment -->
+  <div class="right-side transparan2">
+    <div class="comment">
+      <h3 class="comment">Adelia Tria</h3>
+      <p class="comment">Situs ini sangat membantu saya dalam memahami materi tentang graph. Terima kasih banyak.</p>
+      <h3 class="comment">Aslama Nurul</h3>
+      <p class="comment">Situs ini sangat membantu saya saat belajar tentang materi graph. Apalagi ada soal latihannya juga. uWu Terima kasih banyak.</p>
+      <h3 class="comment">Tegar Herlembang</h3>
+      <p class="comment">Situs ini sangat mantap sekali, bintang 5!</p>
+      <h3 class="comment" id="komennama"></h3>
+      <p class="comment" id="komenkomentar" style="display: none;"></p>
+    </div>
+
+    
+    <!--form comment-->
+    <img class="comment-icon" src="../comment.png" width="50px" onclick="opencom()">
+    
+    <div class="comment-form" id="comment-form-id">
+      <img class="closebtn" src="../cross.png" width="20px" onclick="closecom()">
+      <form id="myForm">
+        <label>Nama:</label><br>
+        <input type="text" name="nama" placeholder="Nama anda" value=""><br>
+        <label>Komentar:</label><br>
+        <textarea rows="5" cols="20" placeholder="Silakan masukkan komentar anda" name="komentar"></textarea><br>
+      </form>
+      <button onclick="submit()">Kirim</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>About Us</h2>
+  <div class="footer-content">
+    <div class="footer-flex">
+      <p>Adelia Tria Amanda</p>
+      <p>adelia.tria.1903116@students.um.ac.id</p>
+      <p>S1 Pendidikan Matematika UM</p>
+    </div>
+    <div class="footer-flex">
+      <p>Aslama Nurul Amini</p>
+      <p>aslama.nurul.1903116@students.um.ac.id </p>
+      <p>S1 Pendidikan Matematika UM</p>
+    </div>
+    <div class="footer-flex">
+      <p>Tegar Herlambang</p>
+      <p>tegar.herlambang.1903116@students.um.ac.id </p>
+      <p>S1 Pendidikan Matematika UM</p>
+    </div>
+  </div>
+  <p style="margin-top: 25px;"><i>© 2022 Kelompok 1 Desain Web</i></p>
+</div>
+
+
+<!--js-->
+<script src="../js.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Graph Sites (Latihan Soal)</title>
+	<link rel="stylesheet" type="text/css" href="../layout.css">
+  <link rel="icon" type="image/x-icon" href="../logo.png">
+</head>
+
+<body>
+<!-- Header -->
+<div class="header">
+  <h1 class="header-text">GRAPH SITES</h1>
+  <p class="header-text">Situs untuk Belajar Graph</p>
+</div>
+
+<!-- (gajadi) Sticky Header -->
+<div class="sticky-header" id="stikhed">
+  <h2>Latihan Soal</h2>
+</div>
+
+<!-- Content -->
+<div class="content" id="konten">
+  <!-- Navigation -->
+  <div class="navtop transparan1">
+    <p><a href="../index.html">Home</a> / <a href="latihan.html">Latihan Soal</a></p>
+  </div>
+
+
+  <div id="dummyid"></div>
+  <!-- left Navigation -->
+  <div class="left-side" id="sidenav">
+    <ul>
+      <div  class="drop-home">
+      <li  style="background-color:#023f52;"><a href="../index.html">Home</a></li>
+      </div>
+
+      <div  class="drop1">
+        <li><a href="../Graph/graph.html">Graph</a></li>
+        <div class="dropdown-container">
+        <li class="sub subdrop1"><a href="../Graph/graph.html#sejarah">Sejarah</a></li>
+        <li class="sub subdrop1"><a href="../Graph/graph.html#definisi">Definisi</a></li>
+        <li class="sub subdrop1"><a href="../Graph/graph.html#adjasensi">Adjasensi dan Insidensi</a></li>
+        <li class="sub subdrop1"><a href="../Graph/graph.html#isomorfisme">Isomorfisme</a></li>
+        <li class="sub subdrop1"><a href="../Graph/graph.html#subgraph">Subgraph</a></li>
+      </div>
+      </div>
+      
+      <div  class="drop2">
+      <li><a href="../Euler/euler.html">Euler dan Hamilton</a></li>
+      <div class="dropdown-container">
+      <li class="sub subdrop2"><a href="../Euler/euler.html#pengantar">Pengantar</a></li>
+      <li class="sub subdrop2"><a href="../Euler/euler.html#grapheu_ha">Graph Euler dan Hamilton</a></li>
+      </div>
+      </div> 
+
+      <div  class="drop3">
+      <li><a href="../Digraph/digraph.html">Digraph</a></li>
+      <div class="dropdown-container">
+      <li class="sub subdrop3"><a href="../Digraph/digraph.html#definisi">Definisi</a></li>
+      <li class="sub subdrop3"><a href="../Digraph/digraph.html#adjasensi">Adjasensi dan Insidensi</a></li>
+      </div>
+      </div>
+
+      <div  class="drop">
+      <li><a href="../Latihan/latihan.html">Latihan Soal</a></li>
+      </div>
+    </ul>
+  </div>
+  <!-- Main Content -->
+  <div class="main transparan1">
+    <center><h2>Latihan Soal</h2></center>
+    
+    <h3 id="Soal">Soal 1</h3>
+    <p>
+    Periksalah apakah barisan (4 4 3 3 2) merupakan graph atau bukan.</p>
+    <button onclick="muncul1()">Pembahasan</button>
+    <button onclick="tutup1()">Tutup Pembahasan</button>
+        <div class="container">
+        <div id="jawab2" class="jawaban">
+        <p id="jawaban1"></p>
+        </div>
+        </div>
+
+    <h3 id="Soal">Soal 2</h3>
+    <p>
+    Periksalah apakah barisan (6 4 4 3 3 2 1 1) merupakan grafik atau bukan.</p>
+    <button onclick="muncul2()">Pembahasan</button>
+    <button onclick="tutup2()">Tutup Pembahasan</button>
+        <div class="container">
+        <div id="jawab2" class="jawaban">
+        <p id="jawaban2"></p>
+        </div>
+        </div>
+<h3 id="Soal">Soal 3</h3>
+    <p>
+    Periksalah apakah barisan (5 4 3 2 1 0) merupakan grafik atau bukan.</p>
+    <button onclick="muncul3()">Pembahasan</button>
+    <button onclick="tutup3()">Tutup Pembahasan</button>
+        <div class="container">
+        <div id="jawab2" class="jawaban">
+        <p id="jawaban3"></p>
+        </div>
+        </div>
+<h3 id="Soal">Soal 4</h3>
+    <p>
+    Buktikan bahwa tidak ada graf dengan tujuh titik yang beraturan dengan derajat 3.</p>
+    <button onclick="muncul4()">Pembahasan</button>
+    <button onclick="tutup4()">Tutup Pembahasan</button>
+        <div class="container">
+        <div id="jawab2" class="jawaban">
+        <p id="jawaban4"></p>
+        </div>
+        </div>
+<h3 id="Soal">Soal 5</h3>
+    <p>
+   Apakah ada graf sederhana yang mempunyai barisan derajat (1,2,3,4)? Jika tidak, berikan alasannya.</p>
+    <button onclick="muncul5()">Pembahasan</button>
+    <button onclick="tutup5()">Tutup Pembahasan</button>
+        <div class="container">
+        <div id="jawab2" class="jawaban">
+        <p id="jawaban5"></p>
+        </div>
+        </div>
+   
+  </div>
+
+  <!-- Comment -->
+  <div class="right-side transparan2">
+    <div class="comment">
+      <h3 class="comment">Adelia Tria</h3>
+      <p class="comment">Situs ini sangat membantu saya dalam memahami materi tentang graph. Terima kasih banyak.</p>
+      <h3 class="comment">Aslama Nurul</h3>
+      <p class="comment">Situs ini sangat membantu saya saat belajar tentang materi graph. Apalagi ada soal latihannya juga. uWu Terima kasih banyak.</p>
+      <h3 class="comment">Tegar Herlembang</h3>
+      <p class="comment">Situs ini sangat mantap sekali, bintang 5!</p>
+      <h3 class="comment" id="komennama"></h3>
+      <p class="comment" id="komenkomentar" style="display: none;"></p>
+    </div>
+
+    
+    <!--form comment-->
+    <img class="comment-icon" src="../comment.png" width="50px" onclick="opencom()">
+    
+    <div class="comment-form" id="comment-form-id">
+      <img class="closebtn" src="../cross.png" width="20px" onclick="closecom()">
+      <form id="myForm">
+        <label>Nama:</label><br>
+        <input type="text" name="nama" placeholder="Nama anda" value=""><br>
+        <label>Komentar:</label><br>
+        <textarea rows="5" cols="20" placeholder="Silakan masukkan komentar anda" name="komentar"></textarea><br>
+      </form>
+      <button onclick="submit()">Kirim</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>About Us</h2>
+  <div class="footer-content">
+    <div class="footer-flex">
+      <p>Adelia Tria Amanda</p>
+      <p>adelia.tria.1903116@students.um.ac.id</p>
+      <p>S1 Pendidikan Matematika UM</p>
+    </div>
+    <div class="footer-flex">
+      <p>Aslama Nurul Amini</p>
+      <p>aslama.nurul.1903116@students.um.ac.id </p>
+      <p>S1 Pendidikan Matematika UM</p>
+    </div>
+    <div class="footer-flex">
+      <p>Tegar Herlambang</p>
+      <p>tegar.herlambang.1903116@students.um.ac.id </p>
+      <p>S1 Pendidikan Matematika UM</p>
+    </div>
+  </div>
+  <p style="margin-top: 25px;"><i>© 2022 Kelompok 1 Desain Web</i></p>
+</div>
+
+
+<!--js-->
+<script src="../js.js"></script>
+
+</body>
+</html>

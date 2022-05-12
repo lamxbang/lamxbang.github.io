@@ -1,0 +1,358 @@
+/*biar tampilan rapi*/
+* {
+  box-sizing: border-box;
+}
+
+/*body*/
+body {
+  font-family: Arial;
+  margin: 0;
+  background-image: url('../background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/*Header*/
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #023f52;
+  color: white;
+}
+
+.header p {
+  font-style: italic;
+}
+
+/*Judul*/
+.sticky-header {
+  background-color: #86a4ae;
+  color: black;
+  text-align: center;
+  padding: 5px;
+}
+
+/*Flex konten*/
+.content {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/*navigasi atas*/
+.navtop {
+  flex: 100%;
+  margin: 10px;
+  padding: 10px 40px;
+  margin-bottom: 0px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.navtop a {
+  color: #009FEB;
+  text-decoration: none;
+}
+
+.navtop a:hover {
+  color: #172250;
+}
+
+/*dummy*/
+.dummy {
+  flex: 20%;
+  background-color: none;
+  padding: 20px 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/*bagian kiri*/
+.left-side {
+  flex: 20%;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  margin: 10px;
+  border-radius: 10px;
+  height: 350px;
+}
+
+li {
+  list-style-type: none;
+  margin: 5px;
+  color: #009FEB;
+  padding: 12px;
+  background-color: #016e8d;
+  margin-right: 50px;
+  border-radius: 10px;
+}
+
+li a {
+  color: #009FEB;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+li a:hover {
+  color: #172250;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.dropdown-container {
+   position: absolute;
+   z-index: 1;
+   margin-left: 180px;
+   width: auto;
+   margin-top: -47px;
+}
+
+.sub {
+  display: none;
+  border-radius: 0px;
+  margin: 0;
+  background-color: rgba(2, 63, 82, 0.7);
+  width: 150px;
+  border-radius: 10px;
+}
+
+.drop-home a {
+  color: #28a7fb;
+}
+
+.drop1:hover .subdrop1 {
+  display: block;
+}
+
+.drop2:hover .subdrop2 {
+  display: block;
+}
+
+.drop3:hover .subdrop3 {
+  display: block;
+}
+
+.drop4:hover .subdrop4 {
+  display: block;
+}
+
+/*Tengah*/
+.main {
+  flex: 50%;
+  background-color: #f7f4f4;
+  padding: 20px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.greeting {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  width: 70%;
+  color: blue;
+  background-color: #016e8d;
+}
+
+.main p, .main h3, .main h2 {
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+table, td {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 400px;
+  height: 100px;
+  text-align: center;
+}
+
+table {
+  border-spacing: 10px;
+  border: none;
+}
+
+td a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  padding-top: 20%;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+td a:hover {
+  color: white;
+}
+
+td {
+  background-color: #016e8d;
+}
+
+td:hover {
+  background-color: #023f52;
+}
+
+/*kanan*/
+.right-side {
+  flex: 20%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+
+/*Komen*/
+
+h3.comment {
+  margin-bottom: 5px;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+p.comment {
+  margin-top: 0;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.comment-icon {
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  padding: 5px;
+}
+
+.comment-icon:hover {
+  position: fixed;
+  width: 75px;
+  cursor: pointer;
+  animation-name: grow;
+  animation-duration: 0.5s;
+}
+
+@keyframes grow {
+  from{width: 50px;}
+  to{width: 75px;}
+}
+
+.comment-form {
+  background-color: #00485e;
+  position: fixed;
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+  right: 30px;
+  bottom: 20px;
+  overflow: hidden;
+  transition: 0.5s;
+  border-radius: 10px;
+  color: white;
+}
+
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.closebtn:hover {
+  cursor: pointer;
+}
+
+input, textarea {
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #00485e;
+  color: white;
+}
+
+.footer-content {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-flex {
+  flex: 33.33%;
+}
+
+
+/*lain lain*/
+
+/* ganti orientasi flex ketika <700 */
+@media screen and (max-width: 700px) {
+  .content, .navbar {   
+    flex-direction: column;
+  }
+}
+
+/*buat js*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky2 {
+  position: fixed;
+  top: 0;
+  width: 22.3%;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  margin: 10px;
+  border-radius: 10px;
+  height: 350px;
+}
+
+.growtop {
+  margin-top: 75px;
+}
+
+/*style umum*/
+
+.transparan1 {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.transparan2 {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.main h3, h5 {
+  display: block;
+  margin-block-start: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.header-text {
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Graph Sites (Graph Theory)</title>
+	<link rel="stylesheet" type="text/css" href="../layout.css">
+  <link rel="icon" type="image/x-icon" href="../logo.png">
+</head>
+
+<body>
+<!-- Header -->
+<div class="header">
+  <h1 class="header-text">GRAPH SITES</h1>
+  <p class="header-text">Situs untuk Belajar Graph</p>
+</div>
+
+<!-- (gajadi) Sticky Header -->
+<div class="sticky-header" id="stikhed">
+  <h2>Graph in General</h2>
+</div>
+
+<!-- Content -->
+<div class="content" id="konten">
+  <!-- Navigation -->
+  <div class="navtop transparan1">
+    <p><a href="../index.html">Home</a> / <a href="graph.html">Graph</a></p>
+  </div>
+
+
+  <div id="dummyid"></div>
+  <!-- left Navigation -->
+  <div class="left-side" id="sidenav">
+    <ul>
+      <div  class="drop-home">
+      <li  style="background-color:#023f52;"><a href="../index.html">Home</a></li>
+      </div>
+
+      <div  class="drop1">
+        <li><a href="../Graph/graph.html">Graph</a></li>
+        <div class="dropdown-container">
+        <li class="sub subdrop1"><a href="../Graph/graph.html#sejarah">Sejarah</a></li>
+        <li class="sub subdrop1"><a href="../Graph/graph.html#definisi">Definisi</a></li>
+        <li class="sub subdrop1"><a href="../Graph/graph.html#adjasensi">Adjasensi dan Insidensi</a></li>
+        <li class="sub subdrop1"><a href="../Graph/graph.html#isomorfisme">Isomorfisme</a></li>
+        <li class="sub subdrop1"><a href="../Graph/graph.html#subgraph">Subgraph</a></li>
+      </div>
+      </div>
+      
+      <div  class="drop2">
+      <li><a href="../Euler/euler.html">Euler dan Hamilton</a></li>
+      <div class="dropdown-container">
+      <li class="sub subdrop2"><a href="../Euler/euler.html#pengantar">Pengantar</a></li>
+      <li class="sub subdrop2"><a href="../Euler/euler.html#grapheu_ha">Graph Euler dan Hamilton</a></li>
+      </div>
+      </div> 
+
+      <div  class="drop3">
+      <li><a href="../Digraph/digraph.html">Digraph</a></li>
+      <div class="dropdown-container">
+      <li class="sub subdrop3"><a href="../Digraph/digraph.html#definisi">Definisi</a></li>
+      <li class="sub subdrop3"><a href="../Digraph/digraph.html#adjasensi">Adjasensi dan Insidensi</a></li>
+      </div>
+      </div>
+
+      <div  class="drop">
+      <li><a href="../Latihan/latihan.html">Latihan Soal</a></li>
+      </div>
+    </ul>
+  </div>
+  <!-- Main Content -->
+  <div class="main transparan1">
+    <center><h2>Teori Graph</h2></center>
+    
+    <h3 id="sejarah">Sejarah Graph</h3>
+    <center><img src="1.sejarah.jpg" width="350px" /></center>
+    <p>
+    Graph sering digunakan untuk merepresentasikan sebuah objek dan hubungannya dengan objek lain. Sejarah teori graph bermula saat ahli matematika Swiss Leonhard Euler memecahkan masalah jembatan Königsberg. Ada empat kota (A, B, C, dan D) yang terhubung satu sama lain dengan tujuh jembatan (a, b, c, d, e, f, g).</p>
+    <p>
+    Masalah jembatan Königsberg adalah teka-teki mengenai kemungkinan menemukan jalan setapak mulai dari suatu kota yang melewati tujuh jembatan tepat satu kali dan dapat kembali ke posisi kota awal. Euler berpendapat bahwa tidak ada jalan semacam itu. Dalam pembuktiannya, Euler menyederhanakan situasi jembatan Konigsberg itu
+    menjadi suatu diagram seperti gambar berikut:
+      </p>
+    <center><img src="1-1.png" width="200px" /></center>
+      <p>
+     Berkat pekerjaan Euler yang diilhami melalui persoalan jembatan
+     Konigsberg itu, maka muncullah suatu cabang Matematika yang cukup
+     penting, yang dikenal dengan nama Teori Graph (Graph Theory).
+     </p>
+    <br>
+    <hr>
+
+    <h3 id="definisi">Definisi Graph</h3>
+    
+    <p>
+    Definisi graf dan unsur–unsur dari graf akan disusun dengan
+    menggunakan bahasa himpunan. Karena itu sebelum sampai pada definisi
+    akan dijelaskan syarat dari suatu himpunan. Dalam pengertian
+    himpunan disyaratkan bahwa setiap elemennya hanya muncul satu kali
+    saja.
+    </p>
+    <h4>Definisi</h4>
+    <p>
+    Graf G adalah pasangan (V(G), X(G)), dimana V(G) adalah himpunan
+    berhingga, yang elemen-elemennya disebut titik  vertex), dan X(G)
+    adalah himpunan pasangan-pasangan dari elemen-elemen V(G) disebut
+    sisi (edge).
+     </p>
+    <h4> Contoh: </h4> <p>Diketahui graph G seperti gambar berikut, maka:</p>
+    <center><img src="2-1.png" width="250px" /></center>
+    <p>Titik atau V(G) = {u, v, w, x}</p>
+    <p>Sisi atau E(G) = {1, 2, 3, 4, 5, 6}.</p>
+    <p>
+    Kita juga dapat menotasikan sisi dengan dua titik yang
+    menghubungkannya. Misalnya, sisi 1 dapat dituliskan dengan ux atau xu, sisi 2 dapat dituliskan dengan uw atau wu, sisi 3 dapat dituliskan dengan wv atau vw, dan lain sebagainya. </p>
+    <br>
+    <hr>
+
+    <h3 id="adjasensi">Adjasensi dan Insidensi</h3>
+   <h4>Definisi</h4>
+  <center><img src="3-1.png" width="170px" /></center>
+  <p>
+  Titik-titik v dan w dari suatu graph adalah simpul-simpul yang
+  adjasensi jika dihubungkan oleh sebuah garis e. Titik v dan w
+  disebut insiden dengan garis e, dan garis e disebut adjasensi dengan
+  titik v dan w.
+  </p>
+  <h4>Derajat Titik</h4>
+  <p>
+  Derajat suatu titik v adalah banyak sisi yang insiden dengan titik
+  v. Biasa dinotasikan dengan deg v atau d(v). Berikut penjelasan
+  lebih lanjut mengenai derajat titik :</p>
+  <center>
+  <video width="400" height="225" controls>
+  <source src="degree_of_vertice.mp4" type="video/mp4">
+  </video></center>
+  <br>
+  <hr>
+
+  <h3 id="isomorfisme">Isomorfisme</h3>
+    
+  <p>Misal kita punya graph dengan keterangan seperti berikut:</p>
+  <p>Vertices: {A, B, C, g, w, e}</p>
+  <p>Edges: {Ag, Aw, Ae, Bg, Bw, Be, Cg, Cw, Ce}</p>
+  <p>Maka kita dapat menggambarkan graph tersebut menjadi:</p>
+  <br>
+  <center><img src="iso1.png" width="325px"></center>
+  <p>Setiap dari graph di atas memiliki 6 vertices dan 9 edges, serta memiliki komponen yang sama, meskipun bentuknya berbeda.Di sisi lain, dua diagram mungkin terlihat sama, tapi memiliki komponen yang berbeda. Contohnya:</p>
+  <center><img src="iso2.png" width="350px"></center>
+
+  <p>Kedua diagram di atas bukan merupakan graph yang sama, namun kita katakan sebagai dua graph yang isomorfis.</p>
+  <br>
+  <hr>
+
+   <h3 id="subgraph">Subgraph</h3>
+  <p>
+  Misalkan dua graf H = (V(H), X(H)) dan G = (V(G), X(G)). Graf H
+  disebut subgraf dari G, jika V(G) subset dari V(G), dan X(H) subset
+  dari X(G)
+  </p>
+  <p>Untuk lebih jelasnya, dapat disimak materi berikut:</p>
+  <center>
+  <iframe
+  width="420"
+  height="315"
+  src="https://www.youtube.com/embed/37LVOEHRzsI">
+  </iframe>
+  </center>
+  <p><i>Sumber: <a href="https://youtu.be/37LVOEHRzsI">https://youtu.be/37LVOEHRzsI</a></i></p>
+  </div>
+
+  <!-- Comment -->
+  <div class="right-side transparan2">
+    <div class="comment">
+      <h3 class="comment">Adelia Tria</h3>
+      <p class="comment">Situs ini sangat membantu saya dalam memahami materi tentang graph. Terima kasih banyak.</p>
+      <h3 class="comment">Aslama Nurul</h3>
+      <p class="comment">Situs ini sangat membantu saya saat belajar tentang materi graph. Apalagi ada soal latihannya juga. uWu Terima kasih banyak.</p>
+      <h3 class="comment">Tegar Herlembang</h3>
+      <p class="comment">Situs ini sangat mantap sekali, bintang 5!</p>
+      <h3 class="comment" id="komennama"></h3>
+      <p class="comment" id="komenkomentar" style="display: none;"></p>
+    </div>
+
+    
+    <!--form comment-->
+    <img class="comment-icon" src="../comment.png" width="50px" onclick="opencom()">
+    
+    <div class="comment-form" id="comment-form-id">
+      <img class="closebtn" src="../cross.png" width="20px" onclick="closecom()">
+      <form id="myForm">
+        <label>Nama:</label><br>
+        <input type="text" name="nama" placeholder="Nama anda" value=""><br>
+        <label>Komentar:</label><br>
+        <textarea rows="5" cols="20" placeholder="Silakan masukkan komentar anda" name="komentar"></textarea><br>
+      </form>
+      <button onclick="submit()">Kirim</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>About Us</h2>
+  <div class="footer-content">
+    <div class="footer-flex">
+      <p>Adelia Tria Amanda</p>
+      <p>adelia.tria.1903116@students.um.ac.id</p>
+      <p>S1 Pendidikan Matematika UM</p>
+    </div>
+    <div class="footer-flex">
+      <p>Aslama Nurul Amini</p>
+      <p>aslama.nurul.1903116@students.um.ac.id </p>
+      <p>S1 Pendidikan Matematika UM</p>
+    </div>
+    <div class="footer-flex">
+      <p>Tegar Herlambang</p>
+      <p>tegar.herlambang.1903116@students.um.ac.id </p>
+      <p>S1 Pendidikan Matematika UM</p>
+    </div>
+  </div>
+  <p style="margin-top: 25px;"><i>© 2022 Kelompok 1 Desain Web</i></p>
+</div>
+
+
+<!--js-->
+<script src="../js.js"></script>
+
+</body>
+</html>
