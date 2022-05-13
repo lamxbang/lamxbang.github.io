@@ -301,3 +301,7 @@ input, textarea {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+
+table, th, td {
+  border: 1px solid;
+}
