@@ -8,22 +8,33 @@
 	<link rel="icon" type="image/x-icon" href="logo.png">
 </head>
 <body>
-	<div class="pass">
-		<p>%0|F?H@f!berhO3e</p>
-		<a href="http://192.168.1.1/html/login_inter.html">link</a>
-	</div>
+<p>Pass: %0|F?H@f!berhO3e</p>
 
-	<p id="p1">Hello, I'm TEXT 1</p>
+<input type="text" value="%0|F?H@f!berhO3e" id="myInput">
 
-<button onclick="copyToClipboard('#p1')">Copy TEXT 1</button>
+<div class="tooltip">
+<button onclick="myFunction()" onmouseout="outFunc()">
+  <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+  Copy text
+  </button>
+</div>
+<br><br>
+<a href="http://192.168.1.1/html/login_inter.html"><button>Link Router</button></a>
 
 <script>
-	function copyToClipboard(element) {
-	  var $temp = $("<input>");
-	  $("body").append($temp);
-	  $temp.val($(element).text()).select();
-	  document.execCommand("copy");
-	  $temp.remove();
+	function myFunction() {
+	  var copyText = document.getElementById("myInput");
+	  copyText.select();
+	  copyText.setSelectionRange(0, 99999);
+	  navigator.clipboard.writeText(copyText.value);
+	  
+	  var tooltip = document.getElementById("myTooltip");
+	  tooltip.innerHTML = "Copied: " + copyText.value;
+	}
+
+	function outFunc() {
+	  var tooltip = document.getElementById("myTooltip");
+	  tooltip.innerHTML = "Copy to clipboard";
 	}
 </script>
 
