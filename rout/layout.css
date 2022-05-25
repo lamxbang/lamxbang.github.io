@@ -3,35 +3,37 @@
   display: inline-block;
 }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 140px;
-  background-color: #555;
-  color: #fff;
+.konten {
+  padding: 0px;
+  background-color: rgba(63, 234, 224, 0.6);
   text-align: center;
-  border-radius: 6px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -75px;
-  opacity: 0;
-  transition: opacity 0.3s;
+  margin: 0px 35%;
+  margin-top: 15%;
+  border-radius: 10px;
+  padding: 10px 0px 50px 0px;
+  box-shadow: 2px 2px 4px #000000;
 }
 
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+button {
+  border-radius: 5px;
+  background-color: #ECECEC;
+  font-size: 20px;
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+button:hover {
+  background-color: #CBCBCB;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px #000000
+}
+
+p {
+  color: white;
+  font-size: 40px;
+}
+
+body {
+  background-image: url(back.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }

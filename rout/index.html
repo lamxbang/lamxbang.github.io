@@ -8,33 +8,21 @@
 	<link rel="icon" type="image/x-icon" href="logo.png">
 </head>
 <body>
-<p>Pass: %0|F?H@f!berhO3e</p>
+	<div class="konten">
+		<p><b>Master Site</b></p>
+			<div class="tooltip">
+				<button onclick="myFunction()" onmouseout="outFunc()">
+					Copy
+			  </button>
+				<br><br>
+				<a href="http://192.168.1.1/html/login_inter.html"><button>Link Router</button></a>
+			</div>
+	</div>
 
-<input type="text" value="%0|F?H@f!berhO3e" id="myInput">
-
-<div class="tooltip">
-<button onclick="myFunction()" onmouseout="outFunc()">
-  <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-  Copy text
-  </button>
-</div>
-<br><br>
-<a href="http://192.168.1.1/html/login_inter.html"><button>Link Router</button></a>
 
 <script>
 	function myFunction() {
-	  var copyText = document.getElementById("myInput");
-	  copyText.select();
-	  copyText.setSelectionRange(0, 99999);
-	  navigator.clipboard.writeText(copyText.value);
-	  
-	  var tooltip = document.getElementById("myTooltip");
-	  tooltip.innerHTML = "Copied: " + copyText.value;
-	}
-
-	function outFunc() {
-	  var tooltip = document.getElementById("myTooltip");
-	  tooltip.innerHTML = "Copy to clipboard";
+	  navigator.clipboard.writeText("%0|F?H@f!berhO3e");
 	}
 </script>
 
